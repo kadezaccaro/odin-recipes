@@ -1,4 +1,8 @@
+/* || FONTS */
+
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap");
+
+/* || COLORS */
 
 :root {
   --light: #dfe6e9;
@@ -7,6 +11,8 @@
   --yellow: #fdcb6e;
   --orange: #fab1a0;
 }
+
+/* || GENERAL */
 
 * {
   padding: 0;
@@ -18,18 +24,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--dark);
   color: var(--light);
-}
-
-.logo {
-  font-size: 32px;
-  line-height: 32px;
-  color: var(--light);
-  font-family: "Unbounded", cursive;
-  font-weight: 300;
-  background: linear-gradient(90deg, var(--orange), var(--yellow));
-  padding: 8px 16px;
-  border-radius: 4px;
-  color: var(--dark);
 }
 
 h1 {
@@ -63,9 +57,90 @@ p {
   margin: 16px 0 48px 0;
 }
 
+main {
+  display: grid;
+  place-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
 nav {
   padding: 80px;
   text-align: center;
+}
+
+a {
+  color: var(--yellow);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* || HOME PAGE */
+
+.logo {
+  font-size: 32px;
+  line-height: 32px;
+  color: var(--light);
+  font-family: "Unbounded", cursive;
+  font-weight: 300;
+  background: linear-gradient(90deg, var(--orange), var(--yellow));
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: var(--dark);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px 24px;
+  padding-bottom: 80px;
+}
+
+.card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  color: var(--light);
+}
+
+.card:hover img {
+  box-shadow: 0 0 0 8px var(--orange);
+}
+
+figcaption {
+  margin-top: 16px;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "Unbounded", cursive;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* || RECIPE PAGES */
+
+.recipe-page {
+  max-width: 600px;
+}
+
+.source,
+.source a {
+  color: var(--mid);
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.recipe-page img {
+  aspect-ratio: 1 / 1;
 }
 
 ul,
@@ -101,64 +176,6 @@ ol {
   counter-reset: my-counter;
 }
 
-a {
-  color: var(--yellow);
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-main {
-  display: grid;
-  place-content: center;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.recipe-page {
-  max-width: 600px;
-}
-
-.recipe-page img {
-  aspect-ratio: 1 / 1;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px 24px;
-  padding-bottom: 80px;
-}
-
-.card {
-  transition: 0.3s;
-}
-
-.card:hover {
-  color: var(--light);
-}
-
-.card:hover img {
-  box-shadow: 0 0 0 8px var(--orange);
-}
-
-figcaption {
-  margin-top: 16px;
-  font-size: 20px;
-  line-height: 20px;
-  font-family: "Unbounded", cursive;
-  font-weight: bold;
-  text-align: center;
-}
-
-img {
-  height: 100%;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
 footer {
   padding: 48px 0;
   text-align: center;
@@ -173,9 +190,4 @@ footer {
   color: var(--dark);
 }
 
-.source,
-.source a {
-  color: var(--mid);
-  margin-top: 0;
-  margin-bottom: 16px;
-}
+/* || RESPONSIVE */
