@@ -49,6 +49,14 @@ h2 {
   font-family: "Unbounded", cursive;
 }
 
+h3 {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 16px 0;
+  color: var(--yellow);
+  font-family: "Unbounded", cursive;
+}
+
 p {
   font-size: 20px;
   line-height: 32px;
@@ -163,4 +171,11 @@ footer {
   font-family: "Unbounded", cursive;
   font-weight: bold;
   color: var(--dark);
+}
+
+.source,
+.source a {
+  color: var(--mid);
+  margin-top: 0;
+  margin-bottom: 16px;
 }
