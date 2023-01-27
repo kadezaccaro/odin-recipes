@@ -62,10 +62,11 @@ main {
   place-content: center;
   max-width: 1200px;
   margin: auto;
+  padding: 0 16px;
 }
 
 nav {
-  padding: 80px;
+  padding: 80px 0;
   text-align: center;
 }
 
@@ -191,3 +192,13 @@ footer {
 }
 
 /* || RESPONSIVE */
+
+@media only screen and (max-width: 800px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    aspect-ratio: 4 / 3;
+  }
+}
